@@ -1,4 +1,5 @@
 import React from "react";
+import "./Box.css";
 
 function Box({ box, removeBox }) {
   const boxStyles = {
@@ -7,9 +8,11 @@ function Box({ box, removeBox }) {
     height: `${box.height}px`,
   };
   return (
-    <div>
+    <div className="Box-container">
       <div style={boxStyles}></div>
-      <button onClick={() => removeBox(box.id)}>x</button>
+      <button className="Box-button" onClick={() => removeBox(box.id)}>
+        x
+      </button>
     </div>
   );
 }

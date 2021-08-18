@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Box from "./Box";
 import NewBoxForm from "./NewBoxForm";
 import { v4 as uuid } from "uuid";
+import "./BoxList.css";
 
 function BoxList() {
   const [boxes, setBoxes] = useState([]);
@@ -22,7 +23,7 @@ function BoxList() {
   };
 
   return (
-    <div>
+    <div className="BoxList-container">
       <NewBoxForm addBox={addBox} />
       {renderBoxes()}
     </div>
